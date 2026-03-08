@@ -1,0 +1,10 @@
+SSH = Secure Shell 
+create public key => (ssh-kegen -t rsa -b 4069 "your mail")
+rsa=>algorithm to create key
+
+
+بيعتمد ع التشفير ب استخدام مفاتيح 
+public key and private key 
+
+public key :على السيرفر (GitHub)
+private key :على جهازك

@@ -1,0 +1,18 @@
+Secure Shell (SSH) protocol
+------------------------------------------------------------------------------
+What is SSH?
+SSH (Secure Shell) is a protocol for securely sending commands to a remote computer over an unsecured network. It uses public key cryptography to encrypt and authenticate connections, replacing older insecure protocols like Telnet, which sent everything in plain text for anyone to intercept.
+
+Key capabilities:
+- Remotely manage servers and infrastructure — administrators can control machines from anywhere as if they were sitting in front of them
+- Securely transfer files — much safer than unencrypted alternatives like FTP
+- Port forwarding/tunneling — wraps packets with new headers to route them across networks they normally couldn't reach, useful for bypassing firewalls or accessing private networks remotely
+
+How it works: 
+SSH runs over TCP (port 22), and uses asymmetric key pairs (public + private keys) to authenticate both sides of the connection. Once authenticated, it negotiates a shared symmetric key to encrypt the actual session data. This is different from HTTPS, which typically only verifies the server's identity, not the client's.
+
+Security considerations: 
+Because SSH usually grants elevated privileges — like installing software or accessing sensitive data — it's a high-value target for attackers. Stolen keys are particularly dangerous since they don't expire unless manually revoked, meaning an attacker could quietly maintain access for months or even years. Large organizations can end up with thousands of untracked keys, making this a significant management challenge.
+______________________________________________________________________________
+Here's the full article:
+https://www.cloudflare.com/learning/access-management/what-is-ssh/
