@@ -1,0 +1,38 @@
+=> Secure Shell (SSH) Report
+ If you have ever had to manage a server from a coffee shop or move files across the world without feeling like a hacker in a movie,
+ you have used SSH. At its core, SSH stands for Secure Shell. It is a protocol that allows two computers to communicate and 
+ share data over an unsecured network like the internet by using a layer of heavy duty encryption. 
+ It replaced older protocols like Telnet, where your passwords were basically sent in plain text for anyone to see.
+
+=> How It Actually Works
+ Think of SSH as a secure, soundproof tunnel built between your computer, known as the Client, and a remote computer,
+  known as the Server.
+
+ First, there is a Handshake. When you start a connection, the two machines exchange public keys 
+ to prove they are who they say they are. Next is Encryption. Once identity is confirmed, they agree on a way to scramble the data.
+ From this point on, every keystroke and command looks like gibberish to anyone watching the traffic.
+ Finally, there is Authentication. You prove you have permission to enter,
+ either with a traditional password or the much safer method of using SSH Keys.
+
+=> Key Components
+
+ SSH Keys consist of a pair of cryptographic keys. One is Public and stays on the server, while the other is Private and stays on your laptop.
+  It is like a lock and a physical key; you can give the lock to anyone, but only your private key can open it.
+
+ Most systems use Port 22 by default. This is where SSH listens for knocks.
+ Many professionals change this to a random number to avoid bots that constantly scan the internet for open doors.
+ There is also a Config File where the magic happens. You can save shortcuts so that instead of typing a long string of numbers and usernames, you can just type a simple nickname for your server.
+
+=> Why Use It
+
+ While developers use it to push code to platforms like GitHub, SSH has other superpowers.
+ SFTP allows for moving files back and forth without security risks. 
+ Port Forwarding, or Tunneling, lets you access a database that is hidden behind a firewall by tunneling it through the SSH connection to your local machine. 
+ It also allows for Remote Command Execution, which means you can automate tasks across many servers at once with a single script.
+
+=> Best Practices
+
+ If you are setting up an SSH server, there are a few human tips to stay safe.
+ You should Disable Root Login so that nobody can try to log in directly as the main administrator. 
+ You should also Kill Passwords by disabling password authentication entirely and relying solely on SSH keys. 
+ If a hacker cannot guess a massive cryptographic key, they are not getting in. Finally, you can use a tool like Fail2Ban, which is like a digital bouncer that automatically blocks any IP address that fails to log in too many times.
