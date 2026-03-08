@@ -1,0 +1,31 @@
+Secure Shell (SSH) Report
+
+If you have ever managed a server from a coffee shop or transferred files across the world without worrying about security, you have probably used SSH. SSH stands for Secure Shell, and it is a protocol that allows two computers to communicate and exchange data securely over an unsecured network such as the internet. It works by adding a strong layer of encryption to the communication process, which protects the transmitted data from being intercepted. SSH was created to replace older protocols like Telnet, where sensitive information such as passwords was sent in plain text and could easily be captured.
+
+How It Works
+
+SSH creates a secure connection between two systems: the client, which is your computer, and the server, which is the remote machine you want to access. When a connection begins, the two systems start with a handshake process. During this stage, they exchange public keys to verify each other’s identity and confirm that both sides are legitimate.
+
+After the handshake, the client and server agree on an encryption method that will be used during the session. Once this encryption is established, all data transferred between the two machines becomes scrambled and unreadable to anyone who might be monitoring the network traffic.
+
+The final step is authentication. At this stage, the user proves that they have permission to access the server. This can be done using a password, but a much safer method is to use SSH keys.
+
+Key Components
+
+SSH keys are based on a pair of cryptographic keys. One key is public and is stored on the server, while the other key is private and remains on the user’s computer. This system works similarly to a lock and key. The public key acts like the lock that anyone can have, but only the matching private key can open it.
+
+By default, SSH uses port 22. This is the port where the SSH service listens for incoming connections. Many administrators change this port to a different number to reduce automated attacks from bots that continuously scan the internet for open SSH ports.
+
+SSH also uses a configuration file where users can define shortcuts for their servers. Instead of typing a long command with an IP address, username, and port every time, the user can simply use a short nickname to connect to the server.
+
+Why It Is Used
+
+While many developers use SSH to push code to platforms like GitHub, it also provides several other powerful features. One of these features is SFTP, which allows files to be transferred securely between systems. Another feature is port forwarding, also known as tunneling, which allows users to access services such as databases that are protected behind firewalls by routing the connection through the SSH tunnel.
+
+SSH also supports remote command execution. This means that users can run commands on remote servers from their own machines, which makes it possible to automate administrative tasks and manage multiple servers efficiently.
+
+Best Practices
+
+When setting up an SSH server, there are several security practices that should be followed. One important step is disabling root login so that attackers cannot attempt to log in directly as the main administrator account. Another recommended practice is disabling password authentication and relying only on SSH keys, which provide a much higher level of security.
+
+It is also common to use tools such as Fail2Ban. This tool monitors login attempts and automatically blocks IP addresses that fail to authenticate too many times, helping protect the server from brute-force attacks.
