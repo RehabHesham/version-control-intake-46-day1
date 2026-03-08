@@ -1,0 +1,20 @@
+SSH in GitHub
+
+SSH (Secure Shell) is a cryptographic network protocol used to securely connect computers and transfer data over unsecured networks like the internet. It creates an encrypted communication channel that protects sensitive information such as authentication credentials and source code. SSH replaced older insecure protocols like Telnet and FTP.
+
+In development platforms like GitHub, SSH is commonly used to authenticate users and interact with repositories. Developers can perform actions such as cloning repositories, pushing code, pulling updates, and managing projects without entering their username and password every time.
+
+SSH authentication works using a key pair system:
+
+Public Key: Uploaded to the GitHub account and used to identify the user.
+
+Private Key: Stored securely on the user’s computer and used to prove their identity.
+
+When a user connects to GitHub using SSH, the platform checks if the private key matches the public key stored in the account. If they match, access is granted.
+
+
+Developers usually generate SSH keys using the following command:
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+
+Using SSH with GitHub provides several advantages, including secure authentication, encrypted communication, and password-free access, making it faster and more convenient for developers who frequently work with Git repositories.
