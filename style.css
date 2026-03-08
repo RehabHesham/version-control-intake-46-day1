@@ -2,6 +2,14 @@ nav {
   background-color: bisque;
 }
 
-#slider{
-    background-color: aqua;
+#slider {
+  background-color: aqua;
+}
+
+h1 {
+  background-color: blueviolet;
+}
+
+section{
+    background-color: beige;
 }
