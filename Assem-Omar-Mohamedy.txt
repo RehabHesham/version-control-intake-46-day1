@@ -1,0 +1,33 @@
+1. What is SSH?
+
+SSH (Secure Shell) is a cryptographic network protocol that allows secure communication between two systems over an unsecured network.
+
+Key features:
+
+Encryption of communication
+
+Authentication using keys
+
+Secure file transfer
+
+Remote command execution
+
+For GitHub, SSH is used to securely connect your local Git client to GitHub's Git servers.
+
+2. Why Use SSH with GitHub?
+
+When working with GitHub you have two main connection methods:
+
+Method	Authentication	Example
+HTTPS	Username + Personal Access Token	https://github.com/user/repo.git
+SSH	SSH Key pair	git@github.com:user/repo.git
+
+3. How SSH Authentication Works with GitHub
+
+SSH uses public-key cryptography.
+
+Two keys are generated:
+
+Key	Description
+Private Key	Stored on your computer (secret)
+Public Key	Uploaded to GitHub
