@@ -1,0 +1,12 @@
+SSH (Secure Shell) is a cryptographic network protocol used to securely access and manage remote computers over an unsecured network such as the internet. 
+It replaces older insecure protocols like Telnet and provides encrypted communication between devices.
+
+Key capabilities of SSH include secure remote login, encrypted command execution, and secure file transfer using tools like SCP and SFTP. 
+It also supports tunneling, which allows other network services to be securely transmitted through an encrypted SSH connection.
+
+SSH works using a client–server architecture. 
+The SSH client initiates a connection to the SSH server running on a remote machine. 
+During the connection process, the server proves its identity using public-key cryptography, and the user is authenticated using either a password or an SSH key pair.
+
+After successful authentication, SSH establishes an encrypted session using strong encryption algorithms. 
+All commands, data, and files transmitted during the session are protected from eavesdropping or tampering, making SSH a widely used tool for secure system administration and remote access.
